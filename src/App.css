@@ -1,0 +1,19 @@
+
+.App {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+}
+
+.segments {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card {
+margin: 10%;
+display: flex;
+justify-content: center;
+text-align: center;
+}
