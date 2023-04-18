@@ -1,7 +1,8 @@
 import './App.css'
+import data from "./data"
 import "bootstrap/dist/css/bootstrap.css";
 
-function SymbolComp({ symbol, id, onClick, style }) {
+function SymbolComp3({ symbol, id, onClick, style }) {
   return (
     <div className="card" style={{ width: "10rem", ...style }} onClick={onClick}>
       <div className="card-body">
@@ -13,4 +14,4 @@ function SymbolComp({ symbol, id, onClick, style }) {
   );
 }
 
-export default SymbolComp
+export default SymbolComp3

@@ -4,6 +4,18 @@ import "bootstrap/dist/css/bootstrap.css";
 import LetterComp from "./LetterComp";
 import SymbolComp from "./SymbolComp";
 import { useState, useEffect } from "react";
+import SymbolComp2 from "./SymbolComp2";
+import SymbolComp3 from "./SymbolComp3";
+
+
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 
 function App() {
   const [card, setCard] = useState(data);
@@ -24,7 +36,8 @@ function App() {
   const randomItem3 = data[randomNumber3];
 
   const [correct, setCorrect] = useState(false);
-  const [incorrect, setIncorrect] = useState(false);
+  const [incorrect1, setIncorrect1] = useState(false);
+  const [incorrect2, setIncorrect2] = useState(false);
 
   console.log("randomNumber", randomNumber);
 
@@ -33,45 +46,54 @@ function App() {
       console.log("I work");
       setCorrect(true);
       setTimeout(() => {
-        setCorrect(false);
         setReset(true);
       }, 300);
-    } else {
-      console.log("I do not work");
+    } else if (id === randomItem2.id) {
+      setIncorrect1(true);
+      setTimeout(() => {
+        setReset(true);
+      }, 300);
+    } else if (id === randomItem3.id) {
+      setIncorrect2(true);
+      setTimeout(() => {
+        setReset(true);
+      }, 300);
     }
   }
 
   useEffect(() => {
-    if (reset) {
-      setCard(data);
-      setCorrect(false);
-      setReset(false);
-    }
-  }, [reset]);
+    setCorrect(false);
+    setReset(false);
+    setIncorrect1(false);
+    setIncorrect2(false);
+    setCard(data);
+     
+  
+  }, [ reset]);
 
-  function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  }
+
 
   const components = [
     <SymbolComp
       id={randomItem.id}
       symbol={randomItem.Symbol}
       onClick={() => clickHandler(randomItem.id)}
+      style={correct && {backgroundColor: 'green'}}
+  
     />,
-    <SymbolComp
+    <SymbolComp2
       id={randomItem2.id}
-      symbol={randomItem2.Symbol}
+      symbol={randomItem2.Symbol} 
       onClick={() => clickHandler(randomItem2.id)}
+      style={incorrect1 && {backgroundColor: 'red'}}
+     
     />,
-    <SymbolComp
+    <SymbolComp3
       id={randomItem3.id}
       symbol={randomItem3.Symbol}
       onClick={() => clickHandler(randomItem3.id)}
+      style={incorrect2 && {backgroundColor: 'red'}}
+
     />,
   ];
 
@@ -83,7 +105,7 @@ function App() {
         <LetterComp
           id={randomItem.id}
           letter={randomItem.Letter}
-          style={correct && { backgroundColor: "#00ff00 " }}
+         
         />
       </div>
       <div className="segments">{components}</div>
