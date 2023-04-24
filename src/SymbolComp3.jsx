@@ -1,5 +1,4 @@
 import './App.css'
-import data from "./data"
 import "bootstrap/dist/css/bootstrap.css";
 
 function SymbolComp3({ symbol, id, onClick, style }) {
