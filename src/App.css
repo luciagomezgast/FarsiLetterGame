@@ -1,14 +1,66 @@
 
+
+/* purple: #8739f9
+bllue: #37B9F1
+GREY: #F2F5F5
+FONT COLOURS::
+TEXT: #595360
+LABEL: #908E9B
+DISABLED: #E1DFE9  
+textsize one: 4rem
+textsize one: 3rem
+textsize one: 2rem*/
+
+
+.outsideApp{
+  background-color: #F2F5F5;
+height: 100vh;
+width:100%;
+
+}
+
+
 .App {
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
+height: 80vh;
+width: 100%; 
+}
+
+
+
+nav {
+ background-color: #252525;
+}
+
+#home {
+color: white;
+/* background-color: red; */
+}
+
+#score {
+  color: gold;
+    }
+
+#Navbar {
+color: white;
+padding-left: 2%;
+}
+
+
+
+
+.letterBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .segments {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .card {
@@ -25,6 +77,5 @@ box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
   outline: none;
 }
 .card:active {
-  /* box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7); */
   box-shadow: inset -5px -5px 10px -3px rgba(0, 0, 0, 0.15);
 }

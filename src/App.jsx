@@ -3,68 +3,87 @@ import data from "./data";
 import "bootstrap/dist/css/bootstrap.css";
 import LetterComp from "./LetterComp";
 import SymbolComp from "./SymbolComp";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import NavBar from "./NavBar";
 
 function App() {
-  const [cards, setCards] = useState([]);
-  const [randomCards, setRandomCards] = useState(getRandomCards());
-
-  const shuffleCards = () => {
-  const shuffledCards = [...data]
-    .sort(() => Math.random() - 0.5)
-    .map((card) => ({...card}))
-setCards(shuffledCards)
+  const [cards, setCards] = useState(data);
+  const [randomCards, setRandomCards] = useState(getThreeRandomSymbolCards());
+  const [isMatch, setIsMatch] = useState(false);
+  const [score, setScore] = useState(0);
 
 
-}
+  function getThreeRandomSymbolCards() {
+    let newArrayOfSymbolCards = [];
+    let amountOfCardsWanted = 3
 
-  function getRandomCards() {
-    const newCards = [];
-    while (newCards.length < 3) {
-      const randomNum = Math.floor(Math.random() * cards.length);
-      if (!newCards.includes(randomNum)) {
-        newCards.push(randomNum);
+    while (newArrayOfSymbolCards.length < amountOfCardsWanted) {
+      let randomIndexNumber = Math.floor(Math.random() * cards.length);
+
+      if (!newArrayOfSymbolCards.includes(randomIndexNumber)) {
+        newArrayOfSymbolCards.push(randomIndexNumber);
       }
     }
-    return newCards.map(index => cards[index]);
+
+    return newArrayOfSymbolCards.map((index) => cards[index]);
   }
+
+
+  const randomIndexOutOfThree = Math.floor(Math.random() * 3)
+
+
+  function ChecksIfMatchOnClick(id) {
+    let savedLetterCompId = randomCards[randomIndexOutOfThree].id
+
+    if (id == savedLetterCompId) {
+ 
+      setScore((prevScore) => prevScore + 1); // Increase the score by 1
+      setIsMatch(true)
+      console.log("we have a match")
+
+     
+    } else {
+      // setScore((prevScore) => prevScore - 1); // Decrease the score by 1
+      console.log("we DO NOT have a match TRY AGAIN");
+    
+    }
+  }
+
+
+
+  useEffect(() => {
+    setRandomCards(getThreeRandomSymbolCards());
+    setIsMatch(false)
+    
   
+  }, [isMatch]);
 
 
-
-  function LetterRandom() {
-    const index = Math.floor(Math.random() * randomCards.length);
-    return { 
-      letter: randomCards[index].Letter, 
-      id: randomCards[index].id, 
-      // onClick: () => clickHandler(randomCards[index].id)
-    };
-  };
-
-  function clickHandler(id) {
-    setCards(oldCard => oldCard.map(card => {
-      return card.id === id ? 
-        {...card, isClicked: card.isClicked} :
-        card;
-    }));
-    setRandomCards(getRandomCards());
-  }
 
   return (
-    <div className="App">
-      <div className="segments">
-        <LetterComp {...LetterRandom()} />
-      </div>
-      <div className="segments">
-        {randomCards.map(card => (
-          <SymbolComp
-            key={card.id}
-            id={card.id}
-            symbol={card.Symbol}
-            isClicked={card.isClicked}
-            onClick={() => clickHandler(card.id)}
+    <div className="outsideApp">
+      <NavBar 
+      currentScore ={score}
+      />
+
+      <div className="App">
+        <div className="letterBox">
+          <LetterComp
+            id={randomCards[randomIndexOutOfThree].id}
+            letter={randomCards[randomIndexOutOfThree].Letter}
           />
-        ))}
+        </div>
+
+        <div className="segments">
+          {randomCards.map((card) => (
+            <SymbolComp
+              key={card.id}
+              id={card.id}
+              symbol={card.Symbol}
+              ChecksIfMatchOnClick={() => ChecksIfMatchOnClick(card.id)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
