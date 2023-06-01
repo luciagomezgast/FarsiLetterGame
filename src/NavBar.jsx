@@ -1,19 +1,18 @@
 import "./NavBar.css";
 import "bootstrap/dist/css/bootstrap.css";
+import { Link } from "react-router-dom";
 
-function NavBar(props) {
+function NavBar() {
   return (
     <nav id="navid" className="navbar navbar-expand  ">
       <a id="Navbar" className="navbar-brand" href="#">
-        Farsi Game{" "}
+        ScriptLit
       </a>
       <button
         className="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
         aria-expanded="false"
+        aria-controls="navbarNav"
         aria-label="Toggle navigation"
       >
         <span className="navbar-toggler-icon"></span>
@@ -21,18 +20,24 @@ function NavBar(props) {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item active">
-            <a id="home" className="nav-link " href="#">
+            <Link to="/" id="home" className="nav-link">
               Home
+            </Link>
+          </li>
+          <li className="nav-item active">
+            <Link to="farsi_home" id="home" className="nav-link">
+              Farsi
+            </Link>
+          </li>
+          <li className="nav-item active">
+            <a id="home" className="nav-link " href="#">
+              Arabic
             </a>
           </li>
-        </ul>
-      </div>
-      <div className="score">
-        <ul className="navbar-nav">
           <li className="nav-item active">
-            <a id="score" className="nav-link ">
-              Current Score : {props.currentScore}
-            </a>
+            <Link to="about_page" id="home" className="nav-link">
+              About
+            </Link>
           </li>
         </ul>
       </div>

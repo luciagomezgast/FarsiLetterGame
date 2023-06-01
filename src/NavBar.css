@@ -7,6 +7,9 @@ nav {
   padding-left: 2%;
 }
 
+.nav-link {
+  color: white;
+}
 .score {
   margin-right: 16px;
 }
