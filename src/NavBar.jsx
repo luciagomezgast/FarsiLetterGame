@@ -25,17 +25,17 @@ function NavBar() {
             </Link>
           </li>
           <li className="nav-item active">
-            <Link to="farsi_home" id="home" className="nav-link">
+            <Link to="/farsi_home" id="home" className="nav-link">
               Farsi
             </Link>
           </li>
           <li className="nav-item active">
-            <a id="home" className="nav-link " href="#">
+            <Link to="/arabic_home" id="home" className="nav-link">
               Arabic
-            </a>
+            </Link>
           </li>
           <li className="nav-item active">
-            <Link to="about_page" id="home" className="nav-link">
+            <Link to="/about_page" id="home" className="nav-link">
               About
             </Link>
           </li>

@@ -24,22 +24,22 @@ function NavBarGame(props) {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item active">
-            <Link to="/" id="home" className="nav-link">
+            <Link to="/" id="home--navBarGame" className="nav-link">
               Home
             </Link>
           </li>
           <li className="nav-item active">
-            <Link to="/farsi_home" id="home" className="nav-link">
+            <Link to="/farsi_home" id="home--navBarGame" className="nav-link">
               Farsi
             </Link>
           </li>
           <li className="nav-item active">
-            <a id="home" className="nav-link " href="#">
+            <Link to="/arabic_home" id="home--navBarGame" className="nav-link">
               Arabic
-            </a>
+            </Link>
           </li>
           <li className="nav-item active">
-            <Link to="/about_page" id="home" className="nav-link">
+            <Link to="/about_page" id="home--navBarGame" className="nav-link">
               About
             </Link>
           </li>
