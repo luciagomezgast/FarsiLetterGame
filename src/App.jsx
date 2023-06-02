@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import NavBar from "./NavBar";
-import NavBarGame from "./NavBarGame";
+import NavBarGame from "./PointsComp";
 import Home from "./Home";
 import FarsiHomePage from "./FarsiHomePage";
 import GameStructure from "./GameStructure";
@@ -19,31 +19,10 @@ import Footer from "../Footer";
 import AboutPage from "../AboutPage";
 
 function App() {
-  function NavBarOrNavBarGame() {
-    const location = useLocation();
-    const currentPath = location.pathname;
-    console.log("current test", currentPath);
-
-    if (currentPath === "/farsi_game" || currentPath === "/arabic_game") {
-      return <NavBarGame />;
-    } else {
-      return <NavBar />;
-    }
-
-    //   if (currentPath === "/farsi_game") {
-    //     return <NavBarGame />;
-    //   } else if (currentPath === "/arabic_game") {
-    //     return <NavBarGame />;
-    //   } else {
-    //     return <NavBar />;
-    //   }
-  }
-
   return (
     <Router>
       <div className="outsideApp">
-        <NavBarOrNavBarGame />
-        {/* currentScore={score} */}
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/farsi_home" element={<FarsiHomePage />} />

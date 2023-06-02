@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import LetterComp from "./LetterComp";
 import SymbolComp from "./SymbolComp";
 import { useState, useEffect } from "react";
-import NavBarGame from "./NavBarGame";
+import PointsComp from "./PointsComp";
 import { useLocation } from "react-router-dom";
 
 const AMOUNT_OF_CARDS = 3;
@@ -11,6 +11,7 @@ const AMOUNT_OF_CARDS = 3;
 function GameStructure({ cards }) {
   const [randomCards, setRandomCards] = useState([]);
   const [score, setScore] = useState(0);
+  const [hearts, setHearts] = useState(5);
   const [randomIndex, setRandomIndex] = useState(0);
 
   function setRandomSymbolCards() {
@@ -39,7 +40,7 @@ function GameStructure({ cards }) {
       setRandomSymbolCards();
       console.log("we have a match");
     } else {
-      setScore((prevScore) => prevScore - 1); // Decrease the score by 1
+      setHearts((prevScore) => prevScore - 1); // Decrease the score by 1
       console.log("we DO NOT have a match TRY AGAIN");
     }
   }
@@ -50,8 +51,9 @@ function GameStructure({ cards }) {
 
   return randomCards.length ? (
     <div className="outside--gameStructure">
-      <NavBarGame currentScore={score} />
-
+      <div className="outer--pointidv">
+        <PointsComp currentScore={score} heartsLeft={hearts} />
+      </div>
       <div className="cards-container">
         <div className="letterBox">
           <LetterComp
