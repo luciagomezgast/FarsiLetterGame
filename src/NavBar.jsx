@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <nav id="navid" className="navbar navbar-expand  ">
+    <nav id="navid" className="navbar navbar-expand">
       <a id="Navbar" className="navbar-brand" href="#">
-        ScriptLit
+        ScriptLit |
       </a>
       <button
         className="navbar-toggler"
@@ -19,24 +19,29 @@ function NavBar() {
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
-          <li className="nav-item active">
+          <li className="nav-item">
             <Link to="/" id="home" className="nav-link">
-              Home
+              Home.
             </Link>
           </li>
-          <li className="nav-item active">
+          <li className="nav-item">
             <Link to="/farsi_home" id="home" className="nav-link">
-              Farsi
+              Farsi.
             </Link>
           </li>
-          <li className="nav-item active">
+          <li className="nav-item">
             <Link to="/arabic_home" id="home" className="nav-link">
-              Arabic
+              Arabic.
             </Link>
           </li>
-          <li className="nav-item active">
+          <li className="nav-item">
+            <Link to="/farsi_home" id="home" className="nav-link">
+              Urdu.
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link to="/about_page" id="home" className="nav-link">
-              About
+              About.
             </Link>
           </li>
         </ul>

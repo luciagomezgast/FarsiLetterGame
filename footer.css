@@ -52,3 +52,27 @@
 .footer-links a:hover {
   color: white;
 }
+
+.copyright {
+  font-size: 0.8rem;
+}
+/* Media query for screens 320px or less */
+@media (max-width: 440px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-6 {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+}

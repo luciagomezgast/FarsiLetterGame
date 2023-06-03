@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { AiFillHeart } from "react-icons/Ai";
 import { AiOutlineHeart } from "react-icons/Ai";
 import HeartsComp from "./HeartsComp";
+import Countdown from "../Countdown";
 
 function PointsComp(props) {
   return (
@@ -14,6 +15,10 @@ function PointsComp(props) {
 
       <div className="heartsComp">
         <HeartsComp heartsLeft={props.heartsLeft} />
+      </div>
+
+      <div id="countdown" className="">
+        <Countdown />
       </div>
     </div>
   );

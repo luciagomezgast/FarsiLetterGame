@@ -5,7 +5,7 @@ import "./home.css";
 function Home() {
   return (
     <>
-      <h1>Welcome to the homepage </h1>
+      <h1>What would you like to learn about today? </h1>
       <div className="homePage">
         <div className="card home-card">
           <img
