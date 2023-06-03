@@ -1,87 +1,47 @@
 import "./App.css";
-import cards from "./data";
 import "bootstrap/dist/css/bootstrap.css";
-import LetterComp from "./LetterComp";
-import SymbolComp from "./SymbolComp";
-import { useState, useEffect } from "react";
 import NavBar from "./NavBar";
+import NavBarGame from "./NavBarGame";
+import Home from "./Home";
+import FarsiHomePage from "./FarsiHomePage";
+import FarsiGameStructure from "./FarsiGameStructure";
+import ArabicHomePage from "./arabicHomePage";
+import ArabicGameStructure from "./ArabicGameStructure";
 
-const AMOUNT_OF_CARDS = 3
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import Footer from "../Footer";
+import AboutPage from "../AboutPage";
 
 function App() {
-  const [randomCards, setRandomCards] = useState([]);
-  const [score, setScore] = useState(0);
-  const [randomIndex, setRandomIndex] = useState(0)
+  function NavBarOrNavBarGame() {
+    const location = useLocation();
+    const currentPath = location.pathname;
 
-
-  function setRandomSymbolCards() {
-    const newArrayOfSymbolCards = [];
-    
-    while (newArrayOfSymbolCards.length < AMOUNT_OF_CARDS) {
-      const randomIndexNumberOfDataArr = Math.floor(Math.random() * cards.length);
-
-      if (!newArrayOfSymbolCards.includes(randomIndexNumberOfDataArr)) {
-        newArrayOfSymbolCards.push(randomIndexNumberOfDataArr);
-      }
-    }
-
-    setRandomCards(newArrayOfSymbolCards.map((index) => cards[index]));
-    setRandomIndex(Math.floor(Math.random() * AMOUNT_OF_CARDS))
+    return currentPath !== "/farsi_game" && <NavBar />;
   }
 
-  //clickhandler
-  function ChecksIfMatchOnClick(id) {
-    let savedLetterCompId = randomCards[randomIndex].id
+  return (
+    <Router>
+      <div className="outsideApp">
+        <NavBarOrNavBarGame />
 
-    if (id === savedLetterCompId) {
- 
-      setScore((prevScore) => prevScore + 1); // Increase the score by 1
-      setRandomSymbolCards();
-      console.log("we have a match")
-
-     
-    } else {
-   
-      setScore((prevScore) => prevScore - 1); // Decrease the score by 1
-      console.log("we DO NOT have a match TRY AGAIN");
-    
-    }
-  }
-
-  useEffect(() => {
-    setRandomSymbolCards();
-  }, [])
-
-
-
-  return randomCards.length ? (
-    <div className="outsideApp">
-      <NavBar 
-      currentScore ={score}
-      />
-
-      <div className="App">
-
-        <div className="letterBox">
-          <LetterComp
-            id={randomCards[randomIndex].id}
-            letter={randomCards[randomIndex].Letter}
-          />
-        </div>
-
-        <div className="segments">
-          {randomCards.map((card) => (
-            <SymbolComp
-              key={card.id}
-              id={card.id}
-              symbol={card.Symbol}
-              ChecksIfMatchOnClick={() => ChecksIfMatchOnClick(card.id)}
-            />
-          ))}
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/farsi_home" element={<FarsiHomePage />} />
+          <Route path="/farsi_game" element={<FarsiGameStructure />} />
+          <Route path="/arabic_home" element={<ArabicHomePage />} />
+          <Route path="/arabic_game" element={<ArabicGameStructure />} />
+          <Route path="/about_page" element={<AboutPage />} />
+        </Routes>
+        <Footer />
       </div>
-    </div>
-  ) : null;
+    </Router>
+  );
 }
 
 export default App;
