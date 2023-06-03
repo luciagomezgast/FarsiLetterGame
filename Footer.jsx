@@ -7,12 +7,6 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-6">
-            <p>
-              &copy; {new Date().getFullYear()} Your Company. All rights
-              reserved.
-            </p>
-          </div>
-          <div className="col-md-6">
             <ul className="footer-links">
               <li>
                 <a href="/">Home</a>
@@ -27,6 +21,11 @@ const Footer = () => {
                 <a href="/contact">Contact</a>
               </li>
             </ul>
+          </div>
+          <div className="col-md-6 copyright">
+            <p>
+              &copy; {new Date().getFullYear()} ScriptLit. All rights reserved.
+            </p>
           </div>
         </div>
       </div>

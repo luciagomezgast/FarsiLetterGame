@@ -10,6 +10,10 @@ nav {
 .nav-link {
   color: white;
 }
-.score {
-  margin-right: 16px;
+
+#navbarNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; /* Changed from 'end' to 'flex-end' */
+  padding-right: 2%;
 }
