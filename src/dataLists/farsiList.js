@@ -155,7 +155,7 @@ export default [
 
   {
     id: 31,
-    Letter: "vâv (in Iranian Persian)",
+    Letter: "vâv",
     Symbol: "واو",
   },
 

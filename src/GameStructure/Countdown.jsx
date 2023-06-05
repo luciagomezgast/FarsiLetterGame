@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 
-const Countdown = () => {
-  const [countdown, setCountdown] = useState(300); // Initial countdown value in seconds
+function Countdown({ countdown }) {
+  // Initial countdown value in seconds
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCountdown((prevCountdown) => prevCountdown - 1);
-    }, 1000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCountdown((prevCountdown) => prevCountdown - 1);
+  //   }, 1000);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, []);
 
   const formatTime = (time) => {
     const minutes = Math.floor((time % 3600) / 60);
@@ -27,6 +27,6 @@ const Countdown = () => {
       <h5>{formatTime(countdown)}</h5>
     </div>
   );
-};
+}
 
 export default Countdown;

@@ -99,6 +99,7 @@
   transform: scale(1.1);
   color: white;
   border: 2px solid;
+  background-color: transparent;
 }
 
 .card-circle--languageHomePage:hover {

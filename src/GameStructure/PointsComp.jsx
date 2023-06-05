@@ -7,7 +7,7 @@ function PointsComp(props) {
   return (
     <div className="pointsComp">
       <div id="countdown" className="">
-        <Countdown />
+        <Countdown countdown={props.countdown} />
       </div>
 
       <div className="heartsComp">

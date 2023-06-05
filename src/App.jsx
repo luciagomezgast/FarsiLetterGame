@@ -1,7 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import NavBar from "./navbar&footer/NavBar";
-import NavBarGame from "./GameStructure/PointsComp";
 import Home from "./Home";
 import FarsiHomePage from "./LanguageSections/FarsiHomePage";
 import GameStructure from "./GameStructure/GameStructure";
@@ -17,6 +16,7 @@ import {
 } from "react-router-dom";
 import Footer from "./navbar&footer/Footer";
 import AboutPage from "../AboutPage";
+import UrduHomePage from "./LanguageSections/UrduHomePage";
 
 function App() {
   return (
@@ -35,6 +35,8 @@ function App() {
             path="/arabic_game"
             element={<GameStructure cards={arabicCards} />}
           />
+
+          <Route path="/urdu_home" element={<UrduHomePage />} />
           <Route path="/about_page" element={<AboutPage />} />
         </Routes>
         <Footer />
