@@ -24,14 +24,15 @@ function NavBar() {
               Home.
             </Link>
           </li>
-          <li className="nav-item">
-            <Link to="/farsi_home" id="home" className="nav-link">
-              Farsi.
-            </Link>
-          </li>
+
           <li className="nav-item">
             <Link to="/arabic_home" id="home" className="nav-link">
               Arabic.
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/farsi_home" id="home" className="nav-link">
+              Farsi.
             </Link>
           </li>
           <li className="nav-item">

@@ -20,8 +20,8 @@ import AboutPage from "../AboutPage";
 
 function App() {
   return (
-    <Router>
-      <div className="outsideApp">
+    <div className="outsideApp">
+      <Router>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -38,8 +38,8 @@ function App() {
           <Route path="/about_page" element={<AboutPage />} />
         </Routes>
         <Footer />
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 
