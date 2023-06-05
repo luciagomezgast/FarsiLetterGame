@@ -1,8 +1,5 @@
 import "./gameStructure.css";
 import "bootstrap/dist/css/bootstrap.css";
-import { Link } from "react-router-dom";
-import { AiFillHeart } from "react-icons/Ai";
-import { AiOutlineHeart } from "react-icons/Ai";
 import HeartsComp from "./HeartsComp";
 import Countdown from "../Countdown";
 

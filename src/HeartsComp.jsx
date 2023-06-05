@@ -1,8 +1,8 @@
 import "./gameStructure.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Link } from "react-router-dom";
-import { AiFillHeart } from "react-icons/Ai";
-import { AiOutlineHeart } from "react-icons/Ai";
+import { AiFillHeart } from "@react-icons/all-files/ai/AiFillHeart";
+import { AiOutlineHeart } from "@react-icons/all-files/ai/AiFillHeart";
 
 function HeartsComp({ heartsLeft }) {
   const FIVE_HEARTS = (
