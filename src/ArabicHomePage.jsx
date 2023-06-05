@@ -28,7 +28,11 @@ function ArabicHomePage() {
       <div className="homePage--box--languageHomePage ">
         <div className="card card-circle--languageHomePage">
           <div className="card-body--languageHomePage">
-            <h5 className="card-title--languageHomePage">Arabic</h5>
+            <h5 className="card-title--languageHomePage">Games?</h5>
+            <p>
+              {" "}
+              Want to learn Letters? Play a game and see how many you can guess!
+            </p>
             <a href="#" className="btn--languageHomePage btn-primary">
               <Link to="/arabic_game" className="btn--link">
                 Play Arabic Letter Game
@@ -39,7 +43,12 @@ function ArabicHomePage() {
 
         <div className="card card-circle--languageHomePage">
           <div className="card-body--languageHomePage">
-            <h5 className="card-title--languageHomePage">Arabic</h5>
+            <h5 className="card-title--languageHomePage">Learn the Letters</h5>
+            <p>
+              {" "}
+              Need to learn the letters first? Check out these videos on the
+              arabic alphabet
+            </p>
             <a href="#" className="btn--languageHomePage btn-primary">
               <Link to="/arabic_game" className="btn--link">
                 Play Arabic Letter Game
@@ -51,6 +60,7 @@ function ArabicHomePage() {
         <div className="card  card-circle--languageHomePage">
           <div className="card-body--languageHomePage">
             <h5 className="card-title--languageHomePage">Arabic</h5>
+            <p> Want more resources free resources on the arabic langauge?</p>
             <a href="#" className="btn--languageHomePage btn-primary">
               <Link to="/arabic_game" className="btn--link">
                 Play Arabic Letter Game

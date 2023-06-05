@@ -1,57 +1,57 @@
 import "./gameStructure.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Link } from "react-router-dom";
-import { AiFillHeart } from "react-icons/Ai";
-import { AiOutlineHeart } from "react-icons/Ai";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 function HeartsComp({ heartsLeft }) {
   const FIVE_HEARTS = (
     <div>
-      <AiFillHeart />
-      <AiFillHeart />
-      <AiFillHeart />
-      <AiFillHeart />
-      <AiFillHeart />
+      <FontAwesomeIcon icon={faHeart} />
+      <FontAwesomeIcon icon={faHeart} />
+      <FontAwesomeIcon icon={faHeart} />
+      <FontAwesomeIcon icon={faHeart} />
+      <FontAwesomeIcon icon={faHeart} />
     </div>
   );
 
   const FOUR_HEARTS = (
     <div>
-      <AiFillHeart />
-      <AiFillHeart />
-      <AiFillHeart />
-      <AiFillHeart />
-      <AiOutlineHeart />
+      <FontAwesomeIcon icon={faHeart} />
+      <FontAwesomeIcon icon={faHeart} />
+      <FontAwesomeIcon icon={faHeart} />
+      <FontAwesomeIcon icon={faHeart} />
+      <span></span>
     </div>
   );
 
   const THREE_HEARTS = (
     <div>
-      <AiFillHeart />
-      <AiFillHeart />
-      <AiFillHeart />
-      <AiOutlineHeart />
-      <AiOutlineHeart />
+      <FontAwesomeIcon icon={faHeart} />
+      <FontAwesomeIcon icon={faHeart} />
+      <FontAwesomeIcon icon={faHeart} />
+      <span></span>
+      <span></span>
     </div>
   );
 
   const TWO_HEARTS = (
     <div>
-      <AiFillHeart />
-      <AiFillHeart />
-      <AiOutlineHeart />
-      <AiOutlineHeart />
-      <AiOutlineHeart />
+      <FontAwesomeIcon icon={faHeart} />
+      <FontAwesomeIcon icon={faHeart} />
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   );
 
   const ONE_HEART = (
     <div>
-      <AiFillHeart />
-      <AiOutlineHeart />
-      <AiOutlineHeart />
-      <AiOutlineHeart />
-      <AiOutlineHeart />
+      <FontAwesomeIcon icon={faHeart} />
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   );
 
