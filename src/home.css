@@ -10,7 +10,6 @@
   background-position: right;
   background-size: 75%;
   overflow-y: auto; /* Add vertical scroll */
-  overflow-x: auto; /* Add vertical scroll */
 }
 
 .homePage--box {
@@ -92,21 +91,36 @@
   text-decoration: underline;
 }
 
+/* .card-circle .btn-primary {
+    padding: 5px 20px;
+    font-size: 12px;
+  } */
+
 @media only screen and (max-width: 600px) {
+  .homePage {
+    background-image: url("./src/images/Daco_5228516.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto; /* Add vertical scroll */
+    overflow-x: auto; /* Add vertical scroll */
+  }
+
+  .home--h1 {
+    width: 89%;
+  }
+
   .card-circle {
-    width: 250px;
-    height: 250px;
+    width: 225px;
+    height: 225px;
     padding: 30px;
   }
 
   .card-circle .card-title {
-    font-size: 35px;
+    font-size: 30px;
   }
-
-  /* .card-circle .btn-primary {
-    padding: 5px 20px;
-    font-size: 12px;
-  } */
+  .btn--link {
+    font-size: 13px;
+  }
 }
 @media only screen and (min-width: 600px) {
   .card-circle {

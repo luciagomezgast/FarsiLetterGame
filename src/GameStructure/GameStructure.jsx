@@ -4,7 +4,7 @@ import LetterComp from "./LetterComp";
 import SymbolComp from "./SymbolComp";
 import { useState, useEffect } from "react";
 import PointsComp from "./PointsComp";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 const AMOUNT_OF_CARDS = 3;
 

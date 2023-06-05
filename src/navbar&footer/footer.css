@@ -36,10 +36,6 @@
   margin-inline: 20px;
 }
 
-.footer-links li:last-child {
-  margin-right: 0;
-}
-
 .footer-links a {
   color: #f2f5f5;
   text-decoration: none;
