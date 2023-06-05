@@ -7,51 +7,51 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 function HeartsComp({ heartsLeft }) {
   const FIVE_HEARTS = (
     <div>
-      <FontAwesomeIcon icon={faHeart} />
-      <FontAwesomeIcon icon={faHeart} />
-      <FontAwesomeIcon icon={faHeart} />
-      <FontAwesomeIcon icon={faHeart} />
-      <FontAwesomeIcon icon={faHeart} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
     </div>
   );
 
   const FOUR_HEARTS = (
     <div>
-      <FontAwesomeIcon icon={faHeart} />
-      <FontAwesomeIcon icon={faHeart} />
-      <FontAwesomeIcon icon={faHeart} />
-      <FontAwesomeIcon icon={faHeart} />
-      <span></span>
+      <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "white" }} />
     </div>
   );
 
   const THREE_HEARTS = (
     <div>
-      <FontAwesomeIcon icon={faHeart} />
-      <FontAwesomeIcon icon={faHeart} />
-      <FontAwesomeIcon icon={faHeart} />
-      <span></span>
-      <span></span>
+      <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "white" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "white" }} />
     </div>
   );
 
   const TWO_HEARTS = (
     <div>
-      <FontAwesomeIcon icon={faHeart} />
-      <FontAwesomeIcon icon={faHeart} />
-      <span></span>
-      <span></span>
-      <span></span>
+      <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "white" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "white" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "white" }} />
     </div>
   );
 
   const ONE_HEART = (
     <div>
-      <FontAwesomeIcon icon={faHeart} />
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+      <FontAwesomeIcon icon={faHeart} style={{ color: "red" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "white" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "white" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "white" }} />
+      <FontAwesomeIcon icon={faHeart} style={{ color: "white" }} />
     </div>
   );
 

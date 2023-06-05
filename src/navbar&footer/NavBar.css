@@ -1,6 +1,7 @@
-nav {
+/* Custom styles for the navbar */
+.navbar {
   background-color: #252525;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box-shadow property */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #Navbar {
@@ -16,9 +17,9 @@ nav {
   color: white;
 }
 
-#navbarNav {
+#navbarSupportedContent {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: end;
   padding-right: 2%;
 }

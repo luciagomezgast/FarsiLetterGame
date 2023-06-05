@@ -4,6 +4,8 @@ import LetterComp from "./LetterComp";
 import SymbolComp from "./SymbolComp";
 import { useState, useEffect } from "react";
 import PointsComp from "./PointsComp";
+import YouHaveLost from "./YouHaveLost";
+import TimesUp from "./YouHaveLost";
 // import { useLocation } from "react-router-dom";
 
 const AMOUNT_OF_CARDS = 3;
@@ -13,6 +15,7 @@ function GameStructure({ cards }) {
   const [score, setScore] = useState(0);
   const [hearts, setHearts] = useState(5);
   const [randomIndex, setRandomIndex] = useState(0);
+  const [countdown, setCountdown] = useState(120);
 
   function setRandomSymbolCards() {
     const newArrayOfSymbolCards = [];
@@ -41,18 +44,47 @@ function GameStructure({ cards }) {
       console.log("we have a match");
     } else {
       setHearts((prevScore) => prevScore - 1); // Decrease the score by 1
-      console.log("we DO NOT have a match TRY AGAIN");
     }
+  }
+
+  function restartGame() {
+    console.log("game restarted");
+    setHearts(5);
+    setScore(0);
+    setCountdown(120);
+    setRandomSymbolCards();
   }
 
   useEffect(() => {
     setRandomSymbolCards();
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCountdown((prevCountdown) => {
+        if (prevCountdown === 0) {
+          clearInterval(interval);
+          return 0;
+        }
+        return prevCountdown - 1;
+      });
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return randomCards.length ? (
     <div className="outside--gameStructure">
       <div className="outer--pointidv">
-        <PointsComp currentScore={score} heartsLeft={hearts} />
+        <PointsComp
+          currentScore={score}
+          heartsLeft={hearts}
+          countdown={countdown}
+        />
+        {!hearts && <YouHaveLost restartGame={() => restartGame()} />}
+        {!countdown && <TimesUp restartGame={() => restartGame()} />}
       </div>
       <div className="cards-container">
         <div className="letterBox">
