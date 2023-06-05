@@ -13,13 +13,17 @@ textsize one: 2rem*/
 
 * {
   font-family: "Fjalla One", sans-serif;
+  margin: none;
+  padding: none;
 }
 
 .outsideApp {
   background-color: #f2f5f5;
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+}
+
+h1 {
+  padding-top: 50px;
+  text-align: center;
 }

@@ -10,7 +10,7 @@ function PointsComp(props) {
   return (
     <div className="pointsComp">
       <div id="score" className="">
-        <h5>Current Score : {props.currentScore} </h5>
+        <h5 id="currentScoreTitle">Current Score : {props.currentScore} </h5>
       </div>
 
       <div className="heartsComp">

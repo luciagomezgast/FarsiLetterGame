@@ -4,34 +4,33 @@ import "./home.css";
 
 function Home() {
   return (
-    <>
-      <h1>What would you like to learn about today? </h1>
-      <div className="homePage">
-        <div className="card home-card">
-          <img
-            className="card-img-top homeCard--images"
-            src="https://picsum.photos/500/500"
-            alt="Letter Pieces"
-          />
-          <div className="card-body homeCard--innerSection">
-            <h5 className="card-title home--card-title-responsive">Arabic </h5>
-            <Link to="/arabic_home"> See more </Link>
+    <div className="homePage">
+      <h1 className="home--h1">What would you like to learn about today? </h1>
+
+      <div className="homePage--box">
+        <div className="card card-circle " id="blueHomePageCard">
+          <div className="card-body">
+            <h5 className="card-title">Arabic</h5>
+            <a href="#" className="btn btn-primary">
+              <Link to="/arabic_home" className="btn--link">
+                See more
+              </Link>
+            </a>
           </div>
         </div>
 
-        <div className="card home-card">
-          <img
-            className="card-img-top homeCard--images"
-            src="https://picsum.photos/500/500"
-            alt="Letter Pieces"
-          />
-          <div className="card-body homeCard--innerSection">
-            <h5 className="card-title home--card-title-responsive">Farsi </h5>
-            <Link to="/farsi_home"> See more </Link>
+        <div className="card card-circle">
+          <div className="card-body">
+            <h5 className="card-title">Farsi</h5>
+            <a href="#" className="btn btn-primary">
+              <Link to="/farsi_home" className="btn--link">
+                See more
+              </Link>
+            </a>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,10 +1,15 @@
 nav {
   background-color: #252525;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box-shadow property */
 }
 
 #Navbar {
   color: white;
   padding-left: 2%;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
 }
 
 .nav-link {
@@ -14,6 +19,6 @@ nav {
 #navbarNav {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end; /* Changed from 'end' to 'flex-end' */
+  justify-content: flex-end;
   padding-right: 2%;
 }

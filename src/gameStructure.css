@@ -15,71 +15,33 @@ textsize one: 2rem*/
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.cards-container {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10%;
-  text-align: center;
-}
-
-.letterBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.segments {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-/* purple: #8739f9
-bllue: #37B9F1
-GREY: #F2F5F5
-FONT COLOURS::
-TEXT: #595360
-LABEL: #908E9B
-DISABLED: #E1DFE9  
-textsize one: 4rem
-textsize one: 3rem
-textsize one: 2rem*/
-
-.outer--outer-pointdiv {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  margin-top: 2%;
+  align-items: center;
+  overflow-y: auto; /* Add vertical scroll */
+  background-image: url("./src/images/Daco_5228516.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 75%;
 }
 
 .outer--pointidv {
   background-color: none;
-  height: 10%;
-  /* padding: 10%; */
+  height: 30%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: end;
-  align-items: center;
-  border-top: 2%;
+  justify-content: center;
 }
 
 .pointsComp {
   background: linear-gradient(to right, #8739f9, #25c3e7);
+  height: 100px;
+  width: 500px;
   display: flex;
-  height: 100%;
-  width: 30%;
   flex-direction: row;
   justify-content: space-around;
   padding: 1%;
   border-radius: 20px;
   margin-top: 40px;
-  margin-right: 40px;
 }
 
 #score {
@@ -104,4 +66,87 @@ textsize one: 2rem*/
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.cards-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.game--card--div {
+  width: 80px;
+  height: 160px;
+  font-size: 15px;
+  box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.25); /* Updated box shadow with bigger size */
+}
+
+.game--card--p {
+  font-size: 15px;
+}
+
+#LetterGameWord {
+  font-size: 30px;
+}
+
+.letterBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.segments {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Default styles for all screen sizes */
+
+/* Media query for screens smaller than 576px */
+@media (max-width: 575px) {
+  .pointsComp {
+    height: 75px;
+    width: 400px;
+  }
+  #currentScoreTitle {
+    font-size: 18px;
+  }
+  .countdown h5 {
+    font-size: 18px;
+  }
+
+  .game--card--div {
+    width: 40px;
+    height: 150px;
+    font-size: 15px;
+  }
+
+  .game--card--p {
+    font-size: 15px;
+  }
+
+  #LetterGameWord {
+    font-size: 30px;
+  }
+}
+
+/* Media query for screens between 576px and 768px */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Styles for medium-sized screens */
+}
+
+/* Media query for screens between 768px and 992px */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Styles for larger screens */
+}
+
+/* Media query for screens larger than 992px */
+@media (min-width: 992px) {
+  /* Styles for extra-large screens */
 }

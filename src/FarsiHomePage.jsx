@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
-import "./farsiHomePage.css";
+import "./languagesHomePage.css";
 
 function FarsiHomePage() {
   return (
