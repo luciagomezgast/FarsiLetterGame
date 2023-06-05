@@ -1,11 +1,11 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
-import NavBar from "./NavBar";
-import NavBarGame from "./PointsComp";
+import NavBar from "./navbar&footer/NavBar";
+import NavBarGame from "./GameStructure/PointsComp";
 import Home from "./Home";
-import FarsiHomePage from "./FarsiHomePage";
-import GameStructure from "./GameStructure";
-import ArabicHomePage from "./ArabicHomePage";
+import FarsiHomePage from "./LanguageSections/FarsiHomePage";
+import GameStructure from "./GameStructure/GameStructure";
+import ArabicHomePage from "./LanguageSections/ArabicHomePage";
 import farsiCards from "./dataLists/farsiList";
 import arabicCards from "./dataLists/arabicList";
 
@@ -15,7 +15,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import Footer from "../Footer";
+import Footer from "./navbar&footer/Footer";
 import AboutPage from "../AboutPage";
 
 function App() {

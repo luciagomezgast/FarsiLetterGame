@@ -1,21 +1,20 @@
 import "./gameStructure.css";
 import "bootstrap/dist/css/bootstrap.css";
 import HeartsComp from "./HeartsComp";
-import Countdown from "../Countdown";
+import Countdown from "./Countdown";
 
 function PointsComp(props) {
   return (
     <div className="pointsComp">
-      <div id="score" className="">
-        <h5 id="currentScoreTitle">Current Score : {props.currentScore} </h5>
+      <div id="countdown" className="">
+        <Countdown />
       </div>
 
       <div className="heartsComp">
         <HeartsComp heartsLeft={props.heartsLeft} />
       </div>
-
-      <div id="countdown" className="">
-        <Countdown />
+      <div id="score" className="">
+        <h5 id="currentScoreTitle">Current Score : {props.currentScore} </h5>
       </div>
     </div>
   );
