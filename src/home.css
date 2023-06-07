@@ -33,8 +33,12 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Updated box shadow with bigger size */
 }
 
-#blueHomePageCard {
+#arabicHomePageCard {
   background: #37b9f1; /* Purple */
+}
+
+#UrduHomePageCard {
+  background: #14de5e;
 }
 
 .card-body {

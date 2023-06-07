@@ -15,7 +15,7 @@ function GameStructure({ cards }) {
   const [score, setScore] = useState(0);
   const [hearts, setHearts] = useState(5);
   const [randomIndex, setRandomIndex] = useState(0);
-  const [countdown, setCountdown] = useState(120);
+  const [countdown, setCountdown] = useState(30);
 
   function setRandomSymbolCards() {
     const newArrayOfSymbolCards = [];
@@ -51,7 +51,7 @@ function GameStructure({ cards }) {
     console.log("game restarted");
     setHearts(5);
     setScore(0);
-    setCountdown(120);
+    setCountdown(30);
     setRandomSymbolCards();
   }
 
