@@ -7,6 +7,8 @@ import GameStructure from "./GameStructure/GameStructure";
 import ArabicHomePage from "./LanguageSections/ArabicHomePage";
 import farsiCards from "./dataLists/farsiList";
 import arabicCards from "./dataLists/arabicList";
+import urduCards from "./dataLists/UrduList";
+import NotFoundPage from "./NotFoundPage/NotFoundPage";
 
 import {
   BrowserRouter as Router,
@@ -37,7 +39,34 @@ function App() {
           />
 
           <Route path="/urdu_home" element={<UrduHomePage />} />
+          <Route
+            path="/urdu_game"
+            element={<GameStructure cards={urduCards} />}
+          />
+
+          <Route path="/urdu_home" element={<UrduHomePage />} />
           <Route path="/about_page" element={<AboutPage />} />
+
+          {/* <Route path="/profile/:idProfile" element={<ProfilePage />} />
+
+          <Route
+            path="/signup"
+            element={
+              <IsAnon>
+                <SignupPage />
+              </IsAnon>
+            }
+          />
+
+          <Route
+            path="/login"
+            element={
+              <IsAnon>
+                <LoginPage />
+              </IsAnon>
+            }
+          /> */}
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
       </Router>

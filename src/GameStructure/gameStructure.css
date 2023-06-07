@@ -122,6 +122,7 @@ textsize one: 2rem*/
     height: 75px;
     width: 300px;
     padding: 5%;
+    /* margin-bottom: 100px; */
   }
   #currentScoreTitle {
     font-size: 14px;
@@ -137,7 +138,7 @@ textsize one: 2rem*/
     height: 120px;
   }
   #LetterGameWord {
-    font-size: 20px;
+    font-size: 30px;
   }
   .game--card--p {
     font-size: 40px;
@@ -150,6 +151,7 @@ textsize one: 2rem*/
     flex-direction: row;
     justify-content: center;
     text-align: center;
+    margin-top: 20px;
   }
 
   .segments {

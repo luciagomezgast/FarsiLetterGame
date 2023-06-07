@@ -2,12 +2,12 @@ export default [
   {
     id: 1,
     Letter: "hamze",
-    Symbol: "همزه",
+    Symbol: "ه",
   },
   {
     id: 2,
     Letter: "ʾalef",
-    Symbol: "الف",
+    Symbol: "ا",
   },
   {
     id: 3,
@@ -17,7 +17,7 @@ export default [
   {
     id: 4,
     Letter: "pe",
-    Symbol: "پ	",
+    Symbol: "پ",
   },
   {
     id: 5,
@@ -32,7 +32,7 @@ export default [
   {
     id: 7,
     Letter: "jim",
-    Symbol: "جیم",
+    Symbol: "ج",
   },
   {
     id: 8,
@@ -42,7 +42,7 @@ export default [
   {
     id: 9,
     Letter: "ḥe ",
-    Symbol: "ح	",
+    Symbol: "ح",
   },
   {
     id: 10,
@@ -52,12 +52,12 @@ export default [
   {
     id: 11,
     Letter: "dâl",
-    Symbol: "دال",
+    Symbol: "د",
   },
   {
     id: 12,
     Letter: "ẕâl",
-    Symbol: "ذال",
+    Symbol: "ذ",
   },
   {
     id: 13,
@@ -77,91 +77,86 @@ export default [
   {
     id: 16,
     Letter: "sin",
-    Symbol: "سین",
+    Symbol: "س",
   },
   {
     id: 17,
     Letter: "šin",
-    Symbol: "شین	",
+    Symbol: "ش",
   },
   {
     id: 18,
     Letter: "ṣâd",
-    Symbol: "صاد",
+    Symbol: "ص",
   },
   {
     id: 19,
     Letter: "zâd",
-    Symbol: "ضاد",
+    Symbol: "ض",
   },
   {
     id: 20,
     Letter: "tâ",
-    Symbol: "طا",
+    Symbol: "ط",
   },
   {
     id: 21,
     Letter: "ẓâ",
-    Symbol: "ظا",
+    Symbol: "ظ",
   },
   {
     id: 22,
     Letter: "ʿayn ",
-    Symbol: "عین",
+    Symbol: "ع",
   },
   {
     id: 23,
     Letter: "ġayn",
-    Symbol: "غین",
+    Symbol: "غ",
   },
   {
     id: 24,
     Letter: "fe",
-    Symbol: " ف",
+    Symbol: "ف",
   },
   {
     id: 25,
     Letter: "qâf",
-    Symbol: "قاف",
+    Symbol: "ق",
   },
   {
     id: 26,
     Letter: "kâf",
-    Symbol: "کاف",
+    Symbol: "ک",
   },
   {
     id: 27,
     Letter: "gâf",
-    Symbol: "گاف",
+    Symbol: "گ",
   },
-
   {
     id: 28,
     Letter: "lâm",
-    Symbol: "لام",
+    Symbol: "ل",
   },
-
   {
     id: 29,
     Letter: "mim",
-    Symbol: "میم",
+    Symbol: "م",
   },
-
   {
     id: 30,
     Letter: "nun",
-    Symbol: "نون",
+    Symbol: "ن",
   },
-
   {
     id: 31,
     Letter: "vâv",
-    Symbol: "واو",
+    Symbol: "و",
   },
-
   {
     id: 32,
-    Letter: "he ",
+    Letter: "he",
     Symbol: "ه",
   },
   {
