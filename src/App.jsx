@@ -7,6 +7,7 @@ import GameStructure from "./GameStructure/GameStructure";
 import ArabicHomePage from "./LanguageSections/ArabicHomePage";
 import farsiCards from "./dataLists/farsiList";
 import arabicCards from "./dataLists/arabicList";
+import NotFoundPage from "./NotFoundPage/NotFoundPage";
 
 import {
   BrowserRouter as Router,
@@ -38,6 +39,8 @@ function App() {
 
           <Route path="/urdu_home" element={<UrduHomePage />} />
           <Route path="/about_page" element={<AboutPage />} />
+
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
       </Router>
