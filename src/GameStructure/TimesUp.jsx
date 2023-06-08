@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import "./youHaveLost.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStopwatch } from "@fortawesome/free-solid-svg-icons";
 
 export default function TimesUp(props) {
-  // const [modal, setModal] = useState(false);
-
   const toggleModal = () => {
     console.log("I am being fucking clicked");
-    // setModal(!modal);
-    // console.log("AM I FUCKING TRUE", modal);
   };
 
   return (
@@ -16,7 +14,9 @@ export default function TimesUp(props) {
       <div onClick={toggleModal} className="overlay"></div>
       <div className="modal-content">
         <div className="you-have-lost">
-          <h2>Time's up</h2>
+          <h2>
+            Time's up <FontAwesomeIcon icon={faStopwatch} />
+          </h2>
           <p className="my-4">
             Oops! You ran out of time. Try again and get a new high score!
           </p>
@@ -33,9 +33,7 @@ export default function TimesUp(props) {
             Want to study more?
           </button>
         </div>
-        {/* <button className="close-modal">CLOSE</button> */}
       </div>
-      {/* </div> */}
     </>
   );
 }
