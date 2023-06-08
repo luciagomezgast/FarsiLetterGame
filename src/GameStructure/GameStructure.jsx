@@ -5,7 +5,7 @@ import SymbolComp from "./SymbolComp";
 import { useState, useEffect } from "react";
 import PointsComp from "./PointsComp";
 import YouHaveLost from "./YouHaveLost";
-import TimesUp from "./YouHaveLost";
+import TimesUp from "./TimesUp";
 // import { useLocation } from "react-router-dom";
 
 const AMOUNT_OF_CARDS = 3;
@@ -18,6 +18,7 @@ function GameStructure({ cards }) {
   const [countdown, setCountdown] = useState(30);
 
   function setRandomSymbolCards() {
+    console.log("who is this", cards);
     const newArrayOfSymbolCards = [];
 
     while (newArrayOfSymbolCards.length < AMOUNT_OF_CARDS) {
@@ -48,11 +49,9 @@ function GameStructure({ cards }) {
   }
 
   function restartGame() {
-    console.log("game restarted");
     setHearts(5);
     setScore(0);
     setCountdown(30);
-    setRandomSymbolCards();
   }
 
   useEffect(() => {
@@ -73,7 +72,7 @@ function GameStructure({ cards }) {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [countdown]);
 
   return randomCards.length ? (
     <div className="outside--gameStructure">
@@ -83,8 +82,11 @@ function GameStructure({ cards }) {
           heartsLeft={hearts}
           countdown={countdown}
         />
-        {!hearts && <YouHaveLost restartGame={() => restartGame()} />}
-        {!countdown && <TimesUp restartGame={() => restartGame()} />}
+        <div>
+          {/* {!hearts && <YouHaveLost restartGame={() => restartGame()} />} */}
+
+          {!countdown && <TimesUp restartGame={() => restartGame()} />}
+        </div>
       </div>
       <div className="cards-container">
         <div className="letterBox">

@@ -22,7 +22,7 @@
   padding-bottom: 5%; */
 }
 
-#languageHomePage--cardtitle {
+/* #languageHomePage--cardtitle {
   background-color: #37b9f1;
 }
 
@@ -32,7 +32,7 @@
 
 #languageHomePage--cardtitle--urdu {
   background-color: #14de5e;
-}
+} */
 
 #languageHomePage--cardbox {
   width: 50%;
@@ -47,7 +47,7 @@
 
 .card-circle--languageHomePage {
   text-align: center;
-  background: #37b9f1;
+  /* background: #37b9f1; */
   border: 10px solid transparent;
   color: #fff;
   padding: 50px;
@@ -59,13 +59,13 @@
   justify-content: center;
   align-items: center;
 }
-#circleFarsiColor {
+/* #circleFarsiColor {
   background: #8739f9;
 }
 
 #circleUrduColor {
   background: #14de5e;
-}
+} */
 
 .card-body--languageHomePage {
   display: flex;
