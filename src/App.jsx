@@ -11,6 +11,8 @@ import Languages from "./dataLists/LanguagesHomePageList/Languages";
 import LanguagesLists from "./dataLists/LettersLists/LettersLists";
 import LanguagesShapes from "./dataLists/LettersLists/LettersListsShapes";
 import LettersTable from "./LettersHelp/LettersTable";
+import SignupPage from "./UserPages/SignupPage/SignupPage";
+import LoginPage from "./UserPages/LoginPage/LoginPage";
 
 import {
   BrowserRouter as Router,
@@ -76,6 +78,9 @@ function App() {
               }
             />
           ))}
+
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginPage />} />
 
           <Route path="/about_page" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />
