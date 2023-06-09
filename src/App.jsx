@@ -9,6 +9,8 @@ import AboutPage from "../AboutPage";
 import LanguageHomePage from "./LanguagesHomePages/LanguageHomePage";
 import Languages from "./dataLists/LanguagesHomePageList/Languages";
 import LanguagesLists from "./dataLists/LettersLists/LettersLists";
+import LanguagesShapes from "./dataLists/LettersLists/LettersListsShapes";
+import LettersTable from "./LettersHelp/LettersTable";
 
 import {
   BrowserRouter as Router,
@@ -38,8 +40,8 @@ function App() {
                   longDescription={language.longDescription}
                   smallDescription={language.smallDescription}
                   gameLink={language.gameLink}
-                  gameHelp={language.gameHelp}
-                  urduResources={language.urduResources}
+                  lettersTable={language.lettersTable}
+                  resources={language.resources}
                 />
               }
             />
@@ -49,9 +51,32 @@ function App() {
             <Route
               key={index}
               path={`/${language.gameLink}`}
-              element={<GameStructure cards={language.LettersObject} />}
+              element={
+                <GameStructure
+                  cards={language.LettersObject}
+                  lettersTable={language.lettersTable}
+                />
+              }
             />
           ))}
+
+          {LanguagesShapes.map((language, index) => (
+            <Route
+              key={index}
+              path={`/${language.lettersTable}`}
+              element={
+                <LettersTable
+                  letters={language.LettersObject}
+                  mainTitle={language.mainTitle}
+                  color={language.color}
+                  cardTitle={language.cardTitle}
+                  longDescription={language.longDescription}
+                  smallDescription={language.smallDescription}
+                />
+              }
+            />
+          ))}
+
           <Route path="/about_page" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
