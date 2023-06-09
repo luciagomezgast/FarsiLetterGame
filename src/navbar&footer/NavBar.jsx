@@ -22,27 +22,37 @@ function NavBar() {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
           <li class="nav-item active">
-            <Link to="/" id="home" className="nav-link">
+            <Link to="/" id="home" className="nav-link ml-2">
               Home.
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/urdu_home" id="home" className="nav-link">
+            <Link to="/urdu_home" id="home" className="nav-link ml-2">
               Urdu.
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/arabic_home" id="home" className="nav-link">
+            <Link to="/arabic_home" id="home" className="nav-link ml-2">
               Arabic.
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/farsi_home" id="home" className="nav-link">
+            <Link to="/farsi_home" id="home" className="nav-link ml-2">
               Farsi.
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/about_page" id="home" className="nav-link">
+            <Link to="/signup" id="home" className="nav-link ml-2">
+              Register
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/login" id="home" className="nav-link ml-2">
+              Log in
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/about_page" id="home" className="nav-link ml-2">
               About.
             </Link>
           </li>
