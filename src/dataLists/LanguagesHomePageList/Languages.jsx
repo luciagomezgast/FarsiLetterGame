@@ -11,7 +11,7 @@ const LANGUAGES_PAGES_TEMPLATE = [
     smallDescription:
       "Start your journey of learning Urdu with interactive games and engaging exercises!",
     gameLink: "urdu_game",
-    gameHelp: "game_explanation",
+    lettersTable: "urdu_letters_table",
     resources: "urdu_resources",
   },
   {
@@ -26,7 +26,7 @@ const LANGUAGES_PAGES_TEMPLATE = [
     smallDescription:
       "Start your journey of learning Arabic with interactive games and engaging exercises!",
     gameLink: "arabic_game",
-    gameHelp: "game_explanation",
+    lettersTable: "arabic_letters_table",
     resources: "arabic_resources",
   },
   {
@@ -41,7 +41,7 @@ const LANGUAGES_PAGES_TEMPLATE = [
     smallDescription:
       "Start your journey of learning Farsi with interactive games and engaging exercises!",
     gameLink: "farsi_game",
-    gameHelp: "game_explanation",
+    lettersTable: "farsi_letters_table",
     resources: "farsi_resources",
   },
 ];

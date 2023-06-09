@@ -27,6 +27,11 @@ function NavBar() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link to="/urdu_home" id="home" className="nav-link">
+              Urdu.
+            </Link>
+          </li>
+          <li className="nav-item">
             <Link to="/arabic_home" id="home" className="nav-link">
               Arabic.
             </Link>
@@ -34,11 +39,6 @@ function NavBar() {
           <li className="nav-item">
             <Link to="/farsi_home" id="home" className="nav-link">
               Farsi.
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/farsi_home" id="home" className="nav-link">
-              Urdu.
             </Link>
           </li>
           <li className="nav-item">

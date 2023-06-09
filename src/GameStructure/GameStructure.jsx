@@ -10,15 +10,16 @@ import TimesUp from "./TimesUp";
 
 const AMOUNT_OF_CARDS = 3;
 
-function GameStructure({ cards }) {
+function GameStructure({ cards, lettersTable }) {
   const [randomCards, setRandomCards] = useState([]);
   const [score, setScore] = useState(0);
   const [hearts, setHearts] = useState(5);
   const [randomIndex, setRandomIndex] = useState(0);
   const [countdown, setCountdown] = useState(30);
 
+  console.log("letterstable", lettersTable);
+
   function setRandomSymbolCards() {
-    console.log("who is this", cards);
     const newArrayOfSymbolCards = [];
 
     while (newArrayOfSymbolCards.length < AMOUNT_OF_CARDS) {
@@ -81,11 +82,20 @@ function GameStructure({ cards }) {
           currentScore={score}
           heartsLeft={hearts}
           countdown={countdown}
+          lettersTable={lettersTable}
         />
         <div>
-          {/* {!hearts && <YouHaveLost restartGame={() => restartGame()} />} */}
+          {!hearts && (
+            <YouHaveLost
+              restartGame={() => restartGame()}
+              currentScore={score}
+              lettersTable={lettersTable}
+            />
+          )}
 
-          {!countdown && <TimesUp restartGame={() => restartGame()} />}
+          {!countdown && (
+            <TimesUp restartGame={() => restartGame()} currentScore={score} />
+          )}
         </div>
       </div>
       <div className="cards-container">

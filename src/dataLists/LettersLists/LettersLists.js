@@ -3,6 +3,8 @@ const LANGUAGES_LETTERS = [
     id: 1,
     language: "Urdu",
     gameLink: "urdu_game",
+    lettersTable: "urdu_letters_table",
+
     LettersObject: [
       {
         id: 1,
@@ -205,6 +207,7 @@ const LANGUAGES_LETTERS = [
     id: 2,
     language: "Arabic",
     gameLink: "arabic_game",
+    lettersTable: "arabic_letters_table",
     LettersObject: [
       {
         id: 1,
@@ -342,6 +345,7 @@ const LANGUAGES_LETTERS = [
     id: 3,
     language: "Farsi",
     gameLink: "farsi_game",
+    lettersTable: "farsi_letters_table",
     LettersObject: [
       {
         id: 1,

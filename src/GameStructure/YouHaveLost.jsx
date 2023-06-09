@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./youHaveLost.css";
+import { Link } from "react-router-dom";
+import "./endModal.css";
 
 export default function YouHaveLost(props) {
   // const [modal, setModal] = useState(false);
@@ -18,7 +19,9 @@ export default function YouHaveLost(props) {
         <div className="you-have-lost">
           <h2>You Have Lost!</h2>
           <p className="my-4">
-            Oops! You ran out of hearts. Try again and get a new high score!
+            Oops! You ran out of hearts. You got a score of{" "}
+            <span className="currentScore--modal"> {props.currentScore}. </span>{" "}
+            Try again and get a new high score!{" "}
           </p>
           <button
             className="restart-button my-3 mx-5"
@@ -26,11 +29,10 @@ export default function YouHaveLost(props) {
           >
             Restart Game
           </button>
-          <button
-            className="restart-button my-3 mx-5"
-            onClick={props.restartGame}
-          >
-            Want to study more?
+          <button className="restart-button my-3 mx-5">
+            <Link to={`/${props.lettersTable}`} className="modal-button-link">
+              Want to study more?
+            </Link>
           </button>
         </div>
         {/* <button className="close-modal">CLOSE</button> */}
