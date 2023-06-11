@@ -11,8 +11,8 @@ import Languages from "./dataLists/LanguagesHomePageList/Languages";
 import LanguagesLists from "./dataLists/LettersLists/LettersLists";
 import LanguagesShapes from "./dataLists/LettersLists/LettersListsShapes";
 import LettersTable from "./LettersHelp/LettersTable";
-import SignupPage from "./UserPages/SignupPage/SignupPage";
-import LoginPage from "./UserPages/LoginPage/LoginPage";
+import SignupPage from "./UserPages/SignupPage";
+import LoginPage from "./UserPages//LoginPage";
 
 import {
   BrowserRouter as Router,

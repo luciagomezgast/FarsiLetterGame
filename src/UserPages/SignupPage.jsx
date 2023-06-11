@@ -1,4 +1,4 @@
-import "../LoginPage/loginPage.css";
+import "./users.css";
 import { Link } from "react-router-dom";
 
 function SignupPage() {
@@ -9,28 +9,13 @@ function SignupPage() {
 
         <form className="login--form  ">
           <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={name}
-            className="login--input"
-          />
+          <input type="text" name="name" className="login--input" />
 
           <label>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={email}
-            className="login--input"
-          />
+          <input type="email" name="email" className="login--input" />
 
           <label>Password:</label>
-          <input
-            type="password"
-            name="password"
-            value={password}
-            className="login--input"
-          />
+          <input type="password" name="password" className="login--input" />
 
           <button type="submit" className="login--loginButton">
             {" "}
